@@ -100,7 +100,6 @@ img {
 
 /* ---------- Homepage Footer Info ---------- */
 .home-info {
-  border-top: 1px solid #d8d8d8;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -207,7 +206,7 @@ img {
 
 /* ---------- Project Pages ---------- */
 .project-page {
-  padding: 60px 48px;
+  padding: 60px 36px;
   max-width: 1100px;
   margin: 0 auto;
 }
