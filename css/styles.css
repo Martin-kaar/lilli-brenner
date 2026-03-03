@@ -297,3 +297,17 @@ img {
   clip: rect(0,0,0,0);
   white-space: nowrap;
 }
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .songcover-intro {
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    padding: 48px 24px;
+  }
+}

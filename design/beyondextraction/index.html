@@ -3,8 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Motion — Lilli Brenner</title>
+  <title>Beyond Extraction — Lilli Brenner</title>
   <link rel="stylesheet" href="../../css/styles.css" />
+  <style>
+    /* ---- Beyond Extraction Project Page ---- */
+
+    .beyond-intro {
+      display: flex;
+      gap: clamp(24px, 4vw, 60px);
+      padding: 36px 36px 0;
+      align-items: flex-start;
+    }
+
+    .beyond-intro__image {
+      flex: 0 0 clamp(180px, 31.5vw, 476px);
+      height: clamp(260px, 44.5vw, 673px);
+      overflow: hidden;
+    }
+
+    .beyond-intro__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .beyond-intro__text {
+      flex: 1;
+      padding-top: 4px;
+    }
+
+    .beyond-page-title {
+      font-family: 'Corporate A Pro', 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(2rem, 4vw, 60px);
+      font-weight: 400;
+      line-height: 1.2;
+      color: #000;
+      margin-bottom: 24px;
+    }
+
+    .beyond-text-block {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: clamp(14px, 1.6vw, 24px);
+      font-weight: 400;
+      line-height: 1.2;
+      color: #000;
+    }
+
+    .beyond-text-block strong {
+      font-weight: 700;
+    }
+
+    .beyond-text-block p + p {
+      margin-top: 14px;
+    }
+
+    /* Full-width video placeholder */
+    .beyond-video {
+      margin-top: 36px;
+      width: 100%;
+      aspect-ratio: 16 / 6;
+      background: #000;
+      overflow: hidden;
+    }
+
+    /* Three-column billboard rows */
+    .beyond-billboard-row {
+      display: flex;
+      width: 100%;
+      margin-top: 8px;
+      gap: 0;
+    }
+
+    .beyond-billboard-row__item {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .beyond-billboard-row__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Bottom navigation */
+    .beyond-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 48px 96px 60px;
+      background: #fff;
+    }
+
+    .beyond-nav a {
+      display: block;
+      transition: opacity 0.2s;
+    }
+
+    .beyond-nav a:hover {
+      opacity: 0.45;
+    }
+
+    .beyond-nav img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
@@ -18,37 +124,105 @@
     </ul>
   </nav>
 
-  <main class="project-page">
-    <a href="../index.html" class="project-page__back">← Back to Design</a>
-
-    <h1 class="project-page__title">Motion</h1>
-
-    <img
-      class="project-page__hero"
-      src="https://picsum.photos/seed/motion_hero/1200/675"
-      alt="Motion — Hero Image"
-    />
-
-    <p class="project-page__description">
-      Motion graphics and animated sequences developed for social media
-      and installation contexts. The project investigates how movement
-      and timing can amplify a message — turning static graphic design
-      ideas into living, breathing visual communication.
-    </p>
-
-    <div class="project-page__meta">
-      <span>Type <strong>Motion Design</strong></span>
-      <span>Year <strong>2025</strong></span>
-      <span>Tools <strong>After Effects, Illustrator</strong></span>
+  <!-- Intro: poster left + title & descriptions right -->
+  <section class="beyond-intro">
+    <div class="beyond-intro__image">
+      <img
+        src="https://www.figma.com/api/mcp/asset/6f17d894-fae1-40bb-bd10-849266791122"
+        alt="Beyond Extraction poster"
+      />
     </div>
-
-    <div class="project-gallery">
-      <img src="https://picsum.photos/seed/motion_g1/800/600" alt="Project detail 1" />
-      <img src="https://picsum.photos/seed/motion_g2/800/600" alt="Project detail 2" />
-      <img src="https://picsum.photos/seed/motion_g3/800/600" alt="Project detail 3" />
-      <img src="https://picsum.photos/seed/motion_g4/800/600" alt="Project detail 4" />
+    <div class="beyond-intro__text">
+      <h1 class="beyond-page-title">Beyond Extraction</h1>
+      <div class="beyond-text-block">
+        <p>
+          <strong>The task</strong><br />
+          We were in groups of six and had to choose an environmental problem and make
+          through processing an identity.
+        </p>
+        <p>
+          <strong>Our interpretation</strong><br />
+          Beyond Extraction is an interdisciplinary awareness campaign that addresses the
+          wasteful use of water as a symbol of natural resource exploitation. Although
+          essential to life, water is often treated as an unlimited resource. The project
+          translates this mindset into an emotional narrative, portraying water use as an
+          intrusion into a living system.
+        </p>
+        <p>
+          The visual language contrasts organic, flowing forms with rigid industrial
+          structures, symbolising the tension between nature and human control. Humans
+          appear as water particles, highlighting the close interdependence between
+          people and water.
+        </p>
+        <p>
+          Sound design combines water samples, rhythmic movement and voice-over, shifting
+          from natural to mechanical tones to emphasise the transition from balance to
+          exploitation.
+        </p>
+        <p>
+          <strong>My part:</strong><br />
+          Poster design
+        </p>
+      </div>
     </div>
-  </main>
+  </section>
+
+  <!-- Full-width: video section -->
+  <div class="beyond-video" aria-label="Beyond Extraction video"></div>
+
+  <!-- Billboard row 1: three posters -->
+  <div class="beyond-billboard-row">
+    <div class="beyond-billboard-row__item">
+      <img
+        src="https://www.figma.com/api/mcp/asset/a573a5de-c209-49b8-879a-5f00d8ac1695"
+        alt="Beyond Extraction billboard — Beyond Extraction"
+      />
+    </div>
+    <div class="beyond-billboard-row__item">
+      <img
+        src="https://www.figma.com/api/mcp/asset/8bc39d27-1996-44e4-a4d9-81c40e20a36d"
+        alt="Beyond Extraction billboard — Wo sind all die Tiere hin?"
+      />
+    </div>
+    <div class="beyond-billboard-row__item">
+      <img
+        src="https://www.figma.com/api/mcp/asset/a57984e5-b037-4088-97bc-13d2f20b8fd4"
+        alt="Beyond Extraction billboard — Mama wo ist mein Zuhause hin?"
+      />
+    </div>
+  </div>
+
+  <!-- Billboard row 2: three posters -->
+  <div class="beyond-billboard-row">
+    <div class="beyond-billboard-row__item">
+      <img
+        src="https://www.figma.com/api/mcp/asset/2d5e8f4f-c5de-4802-b707-5c8a2e79f3a5"
+        alt="Beyond Extraction billboard — Mama ich verstehe das nicht."
+      />
+    </div>
+    <div class="beyond-billboard-row__item">
+      <img
+        src="https://www.figma.com/api/mcp/asset/6be74ce1-8030-49cb-857c-be246e0c56ed"
+        alt="Beyond Extraction billboard — Warum hört mir niemand zu?"
+      />
+    </div>
+    <div class="beyond-billboard-row__item">
+      <img
+        src="https://www.figma.com/api/mcp/asset/eaba0254-ce10-4081-95b0-dbc5e62986a1"
+        alt="Beyond Extraction billboard — Warum darf ich hier nicht schwimmen?"
+      />
+    </div>
+  </div>
+
+  <!-- Bottom navigation arrows -->
+  <nav class="beyond-nav" aria-label="Project navigation">
+    <a href="../index.html" aria-label="Previous project">
+      <img src="https://www.figma.com/api/mcp/asset/ece1f5d3-3498-4c37-8d89-217f21640354" alt="←" />
+    </a>
+    <a href="../index.html" aria-label="Next project">
+      <img src="https://www.figma.com/api/mcp/asset/c6444105-69f9-4797-bc7a-d132ddb798e9" alt="→" />
+    </a>
+  </nav>
 
   <script src="../../js/main.js"></script>
 </body>

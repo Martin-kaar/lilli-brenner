@@ -3,8 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nightscapes — Lilli Brenner</title>
+  <title>Lights — Lilli Brenner</title>
   <link rel="stylesheet" href="../../css/styles.css" />
+  <style>
+    /* ---- Lights (TLS) Photography Page ---- */
+
+    .tls-grid {
+      padding: 36px 36px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .tls-grid img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Flex rows */
+    .tls-row {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    /* Row 1: spacer left (~50%) + tall right image (~47%) */
+    .tls-row--r1 .col-spacer { flex: 0 0 52%; }
+    .tls-row--r1 .col-a      { flex: 1; }
+
+    /* Row 2: medium left (~38%) + overlapping spacer so left sits lower visually via margin */
+    /* In Figma: IMG_2016 starts lower (row2 left ~38% wide) and BRENNER_light2 (row1) overlaps vertically.
+       We approximate by placing them in the same row with top-alignment offset via padding. */
+    .tls-row--r2 .col-a      { flex: 0 0 38.3%; }
+    .tls-row--r2 .col-spacer { flex: 1; }
+
+    /* Row 3: two images side by side — left ~30%, right ~32% with spacer */
+    .tls-row--r3 .col-a      { flex: 0 0 30%; }
+    .tls-row--r3 .col-b      { flex: 0 0 32.4%; }
+    .tls-row--r3 .col-spacer { flex: 1; }
+
+    /* Row 4: wide left (~47%) + wide right (~38%) */
+    .tls-row--r4 .col-a      { flex: 0 0 47%; }
+    .tls-row--r4 .col-b      { flex: 1; }
+
+    /* Bottom navigation */
+    .tls-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 48px 96px 60px;
+      background: #fff;
+    }
+
+    .tls-nav a {
+      display: block;
+      transition: opacity 0.2s;
+    }
+
+    .tls-nav a:hover { opacity: 0.45; }
+
+    .tls-nav img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
@@ -18,37 +83,74 @@
     </ul>
   </nav>
 
-  <main class="project-page">
-    <a href="../index.html" class="project-page__back">← Back to Photography</a>
+  <div class="tls-grid">
 
-    <h1 class="project-page__title">Nightscapes</h1>
-
-    <img
-      class="project-page__hero"
-      src="https://picsum.photos/seed/nightscapes_hero/1200/675"
-      alt="Nightscapes — Hero Image"
-    />
-
-    <p class="project-page__description">
-      Urban and natural environments captured after dark. Warm artificial
-      light bleeds into cold night air — a series about the in-between
-      hours when cities slow down and unexpected moments of intimacy emerge
-      from the shadows.
-    </p>
-
-    <div class="project-page__meta">
-      <span>Type <strong>Urban / Night Photography</strong></span>
-      <span>Year <strong>2024</strong></span>
-      <span>Tools <strong>Sony A7 III, Lightroom</strong></span>
+    <!-- Row 1: right-aligned building facade (tall) -->
+    <div class="tls-row tls-row--r1">
+      <div class="col-spacer"></div>
+      <div class="col-a">
+        <img
+          src="https://www.figma.com/api/mcp/asset/1be63a9d-d805-4879-9777-7313e3b09d29"
+          alt="Building facade at night"
+        />
+      </div>
     </div>
 
-    <div class="project-gallery">
-      <img src="https://picsum.photos/seed/nightscapes_g1/800/600" alt="Project detail 1" />
-      <img src="https://picsum.photos/seed/nightscapes_g2/800/600" alt="Project detail 2" />
-      <img src="https://picsum.photos/seed/nightscapes_g3/800/600" alt="Project detail 3" />
-      <img src="https://picsum.photos/seed/nightscapes_g4/800/600" alt="Project detail 4" />
+    <!-- Row 2: left-aligned car light trails (sits below top of building image) -->
+    <div class="tls-row tls-row--r2">
+      <div class="col-a">
+        <img
+          src="https://www.figma.com/api/mcp/asset/fb588d17-2713-4088-9e66-bb5cf8b703df"
+          alt="Car light trails at night"
+        />
+      </div>
+      <div class="col-spacer"></div>
     </div>
-  </main>
+
+    <!-- Row 3: water texture left + pipes/building right -->
+    <div class="tls-row tls-row--r3">
+      <div class="col-a">
+        <img
+          src="https://www.figma.com/api/mcp/asset/33deaf8b-d1a0-4f68-8830-2d03a89498b0"
+          alt="Water texture abstract"
+        />
+      </div>
+      <div class="col-b">
+        <img
+          src="https://www.figma.com/api/mcp/asset/98f3f899-1140-4d9a-baeb-a2ff966d11cb"
+          alt="Industrial pipes on building"
+        />
+      </div>
+      <div class="col-spacer"></div>
+    </div>
+
+    <!-- Row 4: wide mountain biker left + mountain biker right -->
+    <div class="tls-row tls-row--r4">
+      <div class="col-a">
+        <img
+          src="https://www.figma.com/api/mcp/asset/f8896b6b-d8ef-41c3-97f5-1a9550d32c50"
+          alt="Mountain biker in forest"
+        />
+      </div>
+      <div class="col-b">
+        <img
+          src="https://www.figma.com/api/mcp/asset/dd8cca81-b6c2-4e5f-9132-57d183274e26"
+          alt="Mountain biker trail"
+        />
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom navigation arrows -->
+  <nav class="tls-nav" aria-label="Project navigation">
+    <a href="../index.html" aria-label="Previous project">
+      <img src="https://www.figma.com/api/mcp/asset/22d7bb5c-3918-4e37-83a1-1dc0c5bdb073" alt="←" />
+    </a>
+    <a href="../index.html" aria-label="Next project">
+      <img src="https://www.figma.com/api/mcp/asset/9af1ded8-a052-420e-819f-d5336aebaad5" alt="→" />
+    </a>
+  </nav>
 
   <script src="../../js/main.js"></script>
 </body>

@@ -3,8 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Identity — Lilli Brenner</title>
+  <title>Know Your Meat — Lilli Brenner</title>
   <link rel="stylesheet" href="../../css/styles.css" />
+  <style>
+    /* ---- Know Your Meat Project Page ---- */
+
+    .meat-intro {
+      display: flex;
+      gap: clamp(24px, 4vw, 60px);
+      padding: 36px 36px 0;
+      align-items: flex-start;
+    }
+
+    .meat-intro__image {
+      flex: 0 0 clamp(180px, 31.5vw, 476px);
+      height: clamp(260px, 44.8vw, 678px);
+      overflow: hidden;
+    }
+
+    .meat-intro__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .meat-intro__text {
+      flex: 1;
+      padding-top: 4px;
+    }
+
+    .meat-page-title {
+      font-family: 'Corporate A Pro', 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(2rem, 4vw, 60px);
+      font-weight: 400;
+      line-height: 1.2;
+      color: #000;
+      margin-bottom: 32px;
+    }
+
+    .meat-text-block {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: clamp(14px, 1.6vw, 24px);
+      font-weight: 400;
+      line-height: 1.2;
+      color: #000;
+    }
+
+    .meat-text-block strong {
+      font-weight: 700;
+    }
+
+    .meat-text-block p + p {
+      margin-top: 16px;
+    }
+
+    /* Full-width black video section */
+    .meat-video {
+      margin-top: 36px;
+      width: 100%;
+      background: #000;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Full-width phone mockup strip */
+    .meat-full {
+      margin-top: 36px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .meat-full img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Bottom navigation */
+    .meat-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 48px 96px 60px;
+      background: #fff;
+    }
+
+    .meat-nav a {
+      display: block;
+      transition: opacity 0.2s;
+    }
+
+    .meat-nav a:hover {
+      opacity: 0.45;
+    }
+
+    .meat-nav img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
@@ -18,38 +119,59 @@
     </ul>
   </nav>
 
-  <main class="project-page">
-    <a href="../index.html" class="project-page__back">← Back to Design</a>
+  <!-- Intro: packaging image left + title & description right -->
+  <section class="meat-intro">
+    <div class="meat-intro__image">
+      <img
+        src="https://www.figma.com/api/mcp/asset/84823d20-92b7-44d6-b604-c37eb34419b7"
+        alt="Know Your Meat packaging"
+      />
+    </div>
+    <div class="meat-intro__text">
+      <h1 class="meat-page-title">Know your meat</h1>
+      <div class="meat-text-block">
+        <p>
+          <strong>The task</strong><br />
+          We had to create a project about a topic that was important to us, no guidelines,
+          we where allowed to do whatever we wanted.
+        </p>
+        <p>
+          <strong>My interpretation</strong><br />
+          For me an important topic is veganism. I chose to create a fictional project
+          that forces users to watch the slaughter process before they can buy an
+          animal product.<br /><br />
+          After talking to a lot of people and doing research, almost 80% of my Zielgruppe
+          said the same, they think the slaughterings are horrible but they forget super
+          fast about them, because once they are standing in the supermarket they are not
+          associating meat with those slaughtered animals.<br /><br />
+          My solution for this is a packaging design that forces users to watch videos and
+          pictures of the animals they are purchasing as they are killed, otherwise they
+          can't buy the product.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <h1 class="project-page__title">Identity</h1>
+  <!-- Full-width: video sequence (black) -->
+  <div class="meat-video" aria-label="Sequence video"></div>
 
+  <!-- Full-width: phone mockup strip -->
+  <div class="meat-full">
     <img
-      class="project-page__hero"
-      src="https://picsum.photos/seed/identity_hero/1200/675"
-      alt="Identity — Hero Image"
+      src="https://www.figma.com/api/mcp/asset/e2f4ee8c-9b45-4595-b525-d42f402b2e4e"
+      alt="Know Your Meat app screens"
     />
+  </div>
 
-    <p class="project-page__description">
-      A comprehensive brand identity system developed for a cultural
-      institution. The project covers logo design, typographic system,
-      colour palette, stationery, and digital applications — creating
-      a coherent visual language that reflects the organisation's values
-      and audience.
-    </p>
-
-    <div class="project-page__meta">
-      <span>Type <strong>Brand Identity</strong></span>
-      <span>Year <strong>2024</strong></span>
-      <span>Tools <strong>Adobe Illustrator, Figma</strong></span>
-    </div>
-
-    <div class="project-gallery">
-      <img src="https://picsum.photos/seed/identity_g1/800/600" alt="Project detail 1" />
-      <img src="https://picsum.photos/seed/identity_g2/800/600" alt="Project detail 2" />
-      <img src="https://picsum.photos/seed/identity_g3/800/600" alt="Project detail 3" />
-      <img src="https://picsum.photos/seed/identity_g4/800/600" alt="Project detail 4" />
-    </div>
-  </main>
+  <!-- Bottom navigation arrows -->
+  <nav class="meat-nav" aria-label="Project navigation">
+    <a href="../index.html" aria-label="Previous project">
+      <img src="https://www.figma.com/api/mcp/asset/af65fdf1-8db6-4fdd-8da0-c82ef63c6e4f" alt="←" />
+    </a>
+    <a href="../index.html" aria-label="Next project">
+      <img src="https://www.figma.com/api/mcp/asset/cbd36470-b09c-47fd-a0f6-6d031b9f2a39" alt="→" />
+    </a>
+  </nav>
 
   <script src="../../js/main.js"></script>
 </body>

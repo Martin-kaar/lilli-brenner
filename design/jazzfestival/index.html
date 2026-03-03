@@ -3,8 +3,171 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Editorial — Lilli Brenner</title>
+  <title>Jazzfestival Saalfelden — Lilli Brenner</title>
   <link rel="stylesheet" href="../../css/styles.css" />
+  <style>
+    /* ---- Jazzfestival Project Page ---- */
+
+    .jazz-intro {
+      display: flex;
+      gap: clamp(24px, 4vw, 60px);
+      padding: 36px 36px 0;
+      align-items: flex-start;
+    }
+
+    .jazz-intro__image {
+      flex: 0 0 clamp(180px, 31.7vw, 480px);
+      height: clamp(260px, 44.8vw, 680px);
+      overflow: hidden;
+    }
+
+    .jazz-intro__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .jazz-intro__text {
+      flex: 1;
+      padding-top: 4px;
+    }
+
+    .jazz-page-title {
+      font-family: 'Corporate A Pro', 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(2rem, 4vw, 60px);
+      font-weight: 400;
+      line-height: 1.2;
+      color: #000;
+      margin-bottom: 24px;
+    }
+
+    .jazz-text-block {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: clamp(14px, 1.6vw, 24px);
+      font-weight: 400;
+      line-height: 1.2;
+      color: #000;
+    }
+
+    .jazz-text-block strong {
+      font-weight: 700;
+    }
+
+    .jazz-text-block p + p {
+      margin-top: 16px;
+    }
+
+    /* Moodboard row: flower left + mouth right, asymmetric heights */
+    .jazz-moodboard {
+      display: flex;
+      align-items: flex-start;
+      padding: 36px 36px 0;
+      gap: clamp(24px, 4vw, 60px);
+    }
+
+    .jazz-moodboard__col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .jazz-moodboard__col--left {
+      flex: 0 0 clamp(160px, 33.5vw, 507px);
+      padding-top: clamp(20px, 3.6vw, 55px); /* offset to match Figma stagger */
+    }
+
+    .jazz-moodboard__col--right {
+      flex: 0 0 clamp(160px, 33.6vw, 508px);
+    }
+
+    .jazz-moodboard__col img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .jazz-moodboard__label {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: clamp(12px, 1.6vw, 24px);
+      font-weight: 400;
+      line-height: 1.2;
+      color: #000;
+      margin-top: 12px;
+    }
+
+    /* Two-column: tall banner left + stacked mockups right */
+    .jazz-banner-section {
+      display: flex;
+      align-items: flex-start;
+      padding: 8px 36px 0;
+      gap: 0;
+    }
+
+    .jazz-banner-section__left {
+      flex: 0 0 clamp(140px, 33.4vw, 506px);
+      overflow: hidden;
+    }
+
+    .jazz-banner-section__left img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .jazz-banner-section__right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding-left: clamp(8px, 1.5vw, 20px);
+    }
+
+    .jazz-banner-section__right img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .jazz-banner-section__right img + img {
+      margin-top: 8px;
+    }
+
+    /* Full-width images */
+    .jazz-full {
+      margin-top: 8px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .jazz-full img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Bottom navigation */
+    .jazz-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 48px 96px 60px;
+      background: #fff;
+    }
+
+    .jazz-nav a {
+      display: block;
+      transition: opacity 0.2s;
+    }
+
+    .jazz-nav a:hover {
+      opacity: 0.45;
+    }
+
+    .jazz-nav img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
@@ -18,37 +181,104 @@
     </ul>
   </nav>
 
-  <main class="project-page">
-    <a href="../index.html" class="project-page__back">← Back to Design</a>
+  <!-- Intro: main visual left + title & description right -->
+  <section class="jazz-intro">
+    <div class="jazz-intro__image">
+      <img
+        src="https://www.figma.com/api/mcp/asset/bc0cd591-38e0-414f-8807-61c1528f38a3"
+        alt="Jazzfestival Saalfelden main visual"
+      />
+    </div>
+    <div class="jazz-intro__text">
+      <h1 class="jazz-page-title">Jazzfestival Saalfelden</h1>
+      <div class="jazz-text-block">
+        <p>
+          <strong>The task</strong><br />
+          The real life project was to create an identity for the Jazzfestival in Saalfelden.
+        </p>
+        <p>
+          <strong>My interpretation</strong><br />
+          I decided on these two visuals, which are combined. I wanted to create a contrast
+          or pick up on the aspect of call and response in jazz by designing the flowers in
+          an analogue style and the mouth in a more digital style, so that they are in
+          dialogue with each other. They should also be spontaneous and improvise, as this
+          is also typical of jazz.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <h1 class="project-page__title">Editorial</h1>
+  <!-- Moodboard: two illustrations with labels -->
+  <div class="jazz-moodboard">
+    <div class="jazz-moodboard__col jazz-moodboard__col--right">
+      <img
+        src="https://www.figma.com/api/mcp/asset/615b6cf3-9027-4f60-a896-6b733a2bee84"
+        alt="Smoky mouth illustration"
+      />
+      <p class="jazz-moodboard__label">SMOKY, VELVETY VOCALS</p>
+    </div>
+    <div class="jazz-moodboard__col jazz-moodboard__col--left">
+      <img
+        src="https://www.figma.com/api/mcp/asset/001e8c9b-d462-481f-b375-fd05e692b449"
+        alt="Flower sketch"
+      />
+      <p class="jazz-moodboard__label">HOPE, PURITY</p>
+    </div>
+  </div>
 
+  <!-- Two-column: tall flying banner left + poster mockup & social scene right -->
+  <div class="jazz-banner-section">
+    <div class="jazz-banner-section__left">
+      <img
+        src="https://www.figma.com/api/mcp/asset/71a2390f-7472-4276-a36e-c7cf15b45fba"
+        alt="Jazzfestival flying banner mockup"
+      />
+    </div>
+    <div class="jazz-banner-section__right">
+      <img
+        src="https://www.figma.com/api/mcp/asset/a7007274-9688-476e-a673-b8fae87501c9"
+        alt="Jazzfestival poster frame mockup"
+      />
+      <img
+        src="https://www.figma.com/api/mcp/asset/95a5b80a-e20b-4f50-a857-fe3af7ca6603"
+        alt="Jazzfestival social media mockup"
+      />
+    </div>
+  </div>
+
+  <!-- Full-width: bus shelter billboard mockup -->
+  <div class="jazz-full">
     <img
-      class="project-page__hero"
-      src="https://picsum.photos/seed/editorial_hero/1200/675"
-      alt="Editorial — Hero Image"
+      src="https://www.figma.com/api/mcp/asset/70a79291-0e09-43e6-8eb1-1883395ef0fe"
+      alt="Jazzfestival billboard mockup"
     />
+  </div>
 
-    <p class="project-page__description">
-      Magazine layout and editorial design exploring the intersection
-      of culture and society. Typographic hierarchy, image curation,
-      and grid systems work together to guide the reader through
-      long-form content with clarity and visual rhythm.
-    </p>
+  <!-- Full-width: t-shirt mockup -->
+  <div class="jazz-full">
+    <img
+      src="https://www.figma.com/api/mcp/asset/91fecd3d-6f52-4ccb-be2a-e0cc947bb67b"
+      alt="Jazzfestival t-shirt mockup"
+    />
+  </div>
 
-    <div class="project-page__meta">
-      <span>Type <strong>Editorial Design</strong></span>
-      <span>Year <strong>2024</strong></span>
-      <span>Tools <strong>Adobe InDesign, Photoshop</strong></span>
-    </div>
+  <!-- Full-width: street billboard mockup -->
+  <div class="jazz-full">
+    <img
+      src="https://www.figma.com/api/mcp/asset/89409b0b-3abb-4c5f-aba8-d626031436d1"
+      alt="Jazzfestival street billboard mockup"
+    />
+  </div>
 
-    <div class="project-gallery">
-      <img src="https://picsum.photos/seed/editorial_g1/800/600" alt="Project detail 1" />
-      <img src="https://picsum.photos/seed/editorial_g2/800/600" alt="Project detail 2" />
-      <img src="https://picsum.photos/seed/editorial_g3/800/600" alt="Project detail 3" />
-      <img src="https://picsum.photos/seed/editorial_g4/800/600" alt="Project detail 4" />
-    </div>
-  </main>
+  <!-- Bottom navigation arrows -->
+  <nav class="jazz-nav" aria-label="Project navigation">
+    <a href="../index.html" aria-label="Previous project">
+      <img src="https://www.figma.com/api/mcp/asset/a44d6490-4bc5-4af0-8b57-810af826dbea" alt="←" />
+    </a>
+    <a href="../index.html" aria-label="Next project">
+      <img src="https://www.figma.com/api/mcp/asset/3ca5d819-20fb-4728-8287-c9a724f9a9fe" alt="→" />
+    </a>
+  </nav>
 
   <script src="../../js/main.js"></script>
 </body>

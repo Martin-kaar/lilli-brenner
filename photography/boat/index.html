@@ -3,8 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sea — Lilli Brenner</title>
+  <title>Kite — Lilli Brenner</title>
   <link rel="stylesheet" href="../../css/styles.css" />
+  <style>
+    /* ---- Kite Photography Page ---- */
+
+    .kite-grid {
+      padding: 36px 36px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .kite-grid img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Flex rows */
+    .kite-row {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    /* Row 1: large boats left (~55%) + flex spacer + portrait-in-helmet right (~24%) */
+    .kite-row--r1 .col-boats   { flex: 0 0 55.4%; }
+    .kite-row--r1 .col-spacer  { flex: 1; }
+    .kite-row--r1 .col-portrait { flex: 0 0 24%; }
+
+    /* Row 2: 5-photo strip with left indent */
+    .kite-row--r2 .col-spacer { flex: 0 0 19.2%; }
+    .kite-row--r2 .col-photo  { flex: 1; }
+
+    /* Row 3: full-width boat scene — no extra gap needed */
+    .kite-row--r3 .col-full { flex: 1; }
+
+    /* Row 4: kiter portrait (~30%) + cam (~20%) + mountain landscape (~31%) + spacer */
+    .kite-row--r4 .col-portrait  { flex: 0 0 30.1%; }
+    .kite-row--r4 .col-cam       { flex: 0 0 19.8%; }
+    .kite-row--r4 .col-mountain  { flex: 0 0 31.1%; }
+    .kite-row--r4 .col-spacer    { flex: 1; }
+
+    /* Row 5: lake portrait left (~38.5%) + right col stacking cityscape + helmets */
+    .kite-row--r5 .col-lake      { flex: 0 0 38.5%; }
+    .kite-row--r5 .col-right     { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+
+    /* Aspect-ratio helpers for flexible rows */
+    .ratio-boats    { aspect-ratio: 837 / 1117; }
+    .ratio-portrait { aspect-ratio: 363 / 484; }
+    .ratio-strip    { aspect-ratio: 237 / 315; }
+    .ratio-fullw    { aspect-ratio: 1438 / 1079; }
+    .ratio-kiter    { aspect-ratio: 455 / 608; }
+    .ratio-cam      { aspect-ratio: 299 / 224; }
+    .ratio-mtn      { aspect-ratio: 470 / 628; }
+    .ratio-lake     { aspect-ratio: 581 / 774; }
+    .ratio-city     { aspect-ratio: 235 / 313; }
+    .ratio-helmets  { aspect-ratio: 709 / 531; }
+
+    .kite-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Bottom navigation */
+    .kite-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 48px 96px 60px;
+      background: #fff;
+    }
+
+    .kite-nav a {
+      display: block;
+      transition: opacity 0.2s;
+    }
+
+    .kite-nav a:hover { opacity: 0.45; }
+
+    .kite-nav img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
@@ -18,37 +105,128 @@
     </ul>
   </nav>
 
-  <main class="project-page">
-    <a href="../index.html" class="project-page__back">← Back to Photography</a>
+  <div class="kite-grid">
 
-    <h1 class="project-page__title">Sea</h1>
-
-    <img
-      class="project-page__hero"
-      src="https://picsum.photos/seed/sea_hero/1200/675"
-      alt="Sea — Hero Image"
-    />
-
-    <p class="project-page__description">
-      Photographs of harbours, coastal towns, and open water. The series
-      focuses on texture — the worn surface of boat hulls, the ripple
-      patterns of shallow bays, the grey weight of an overcast horizon —
-      as a way of reading time and human labour into landscape.
-    </p>
-
-    <div class="project-page__meta">
-      <span>Type <strong>Seascape Photography</strong></span>
-      <span>Year <strong>2025</strong></span>
-      <span>Tools <strong>Sony A7 III, Lightroom</strong></span>
+    <!-- Row 1: large boats (left) + portrait in helmet (right) -->
+    <div class="kite-row kite-row--r1">
+      <div class="col-boats ratio-boats">
+        <img
+          src="https://www.figma.com/api/mcp/asset/9238840c-d3fb-492f-93ae-bd5d815ba6fd"
+          alt="Inflatable boats stacked"
+        />
+      </div>
+      <div class="col-spacer"></div>
+      <div class="col-portrait ratio-portrait">
+        <img
+          src="https://www.figma.com/api/mcp/asset/566e8c83-3478-4475-b102-424beb538b14"
+          alt="Kitesurfer portrait in helmet"
+        />
+      </div>
     </div>
 
-    <div class="project-gallery">
-      <img src="https://picsum.photos/seed/sea_g1/800/600" alt="Project detail 1" />
-      <img src="https://picsum.photos/seed/sea_g2/800/600" alt="Project detail 2" />
-      <img src="https://picsum.photos/seed/sea_g3/800/600" alt="Project detail 3" />
-      <img src="https://picsum.photos/seed/sea_g4/800/600" alt="Project detail 4" />
+    <!-- Row 2: 5-photo strip with left offset -->
+    <div class="kite-row kite-row--r2">
+      <div class="col-spacer"></div>
+      <div class="col-photo ratio-strip">
+        <img
+          src="https://www.figma.com/api/mcp/asset/4f477b21-bbac-44f3-8e35-d49a240540b2"
+          alt="Person in wetsuit gear"
+        />
+      </div>
+      <div class="col-photo ratio-strip">
+        <img
+          src="https://www.figma.com/api/mcp/asset/5fed52cd-45b5-4d0e-a2ad-471cbdaa1f19"
+          alt="Person smiling in wetsuit"
+        />
+      </div>
+      <div class="col-photo ratio-strip">
+        <img
+          src="https://www.figma.com/api/mcp/asset/3497a710-17e0-430a-b0fc-94d2e295d0fc"
+          alt="Orange life ring buoy"
+        />
+      </div>
+      <div class="col-photo ratio-strip">
+        <img
+          src="https://www.figma.com/api/mcp/asset/57c6cc0f-1574-4de9-83ee-9b81b6b32b59"
+          alt="Red net mesh"
+        />
+      </div>
+      <div class="col-photo ratio-strip">
+        <img
+          src="https://www.figma.com/api/mcp/asset/eb4d26df-5470-4283-95a2-98776f977391"
+          alt="Kite canopy closeup"
+        />
+      </div>
     </div>
-  </main>
+
+    <!-- Row 3: full-width boat on lake with mountains -->
+    <div class="kite-row kite-row--r3">
+      <div class="col-full ratio-fullw">
+        <img
+          src="https://www.figma.com/api/mcp/asset/4947dd03-63dd-44d1-94ff-58d43c4dcb62"
+          alt="Jetskis on lake with mountain backdrop"
+        />
+      </div>
+    </div>
+
+    <!-- Row 4: kiter portrait + camera + mountain landscape -->
+    <div class="kite-row kite-row--r4">
+      <div class="col-portrait ratio-kiter">
+        <img
+          src="https://www.figma.com/api/mcp/asset/1e2c8812-d869-4763-9bbf-af0bda2cd6da"
+          alt="Kiteboarder portrait"
+        />
+      </div>
+      <div class="col-cam ratio-cam">
+        <img
+          src="https://www.figma.com/api/mcp/asset/dd44493b-7c8d-4efd-bb4e-26401acea01c"
+          alt="Red action camera on tripod"
+        />
+      </div>
+      <div class="col-mountain ratio-mtn">
+        <img
+          src="https://www.figma.com/api/mcp/asset/546a7b22-907d-4320-83c6-3e66a3b1258f"
+          alt="Mountain lake landscape"
+        />
+      </div>
+      <div class="col-spacer"></div>
+    </div>
+
+    <!-- Row 5: lake portrait (left) + cityscape + scattered helmets (right, stacked) -->
+    <div class="kite-row kite-row--r5">
+      <div class="col-lake ratio-lake">
+        <img
+          src="https://www.figma.com/api/mcp/asset/3ed682d8-4d36-4d75-b38c-da7b587b421e"
+          alt="Lake and mountain portrait"
+        />
+      </div>
+      <div class="col-right">
+        <div class="ratio-city">
+          <img
+            src="https://www.figma.com/api/mcp/asset/74b1a46e-d96a-4835-95b8-c44d03a892dc"
+            alt="Moody cityscape at dusk"
+          />
+        </div>
+        <div class="ratio-helmets">
+          <img
+            src="https://www.figma.com/api/mcp/asset/faa75168-b28e-4fc7-a41c-93a5f7833844"
+            alt="Scattered yellow kite helmets"
+          />
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom navigation arrows -->
+  <nav class="kite-nav" aria-label="Project navigation">
+    <a href="../index.html" aria-label="Previous project">
+      <img src="https://www.figma.com/api/mcp/asset/b9c7ab84-18d4-4aac-a867-2925e92a3b2c" alt="←" />
+    </a>
+    <a href="../index.html" aria-label="Next project">
+      <img src="https://www.figma.com/api/mcp/asset/ff17b589-c849-4cff-8e1a-b9b2019919f8" alt="→" />
+    </a>
+  </nav>
 
   <script src="../../js/main.js"></script>
 </body>

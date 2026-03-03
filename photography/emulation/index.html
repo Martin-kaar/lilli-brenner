@@ -3,8 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>People — Lilli Brenner</title>
+  <title>Emulation — Lilli Brenner</title>
   <link rel="stylesheet" href="../../css/styles.css" />
+  <style>
+    /* ---- Emulation Photography Page ---- */
+
+    .emu-page {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Full-width photos with side padding matching grid pages */
+    .emu-full {
+      padding: 36px 36px 0;
+    }
+
+    .emu-full img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Portrait grid: single composite image, slightly tighter top gap */
+    .emu-grid {
+      padding: 8px 36px 0;
+    }
+
+    .emu-grid img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Text block */
+    .emu-text {
+      padding: 60px 53px 80px;
+      max-width: 1200px;
+    }
+
+    .emu-text__title {
+      font-family: 'Corporate A Pro', 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(2rem, 4vw, 60px);
+      line-height: 1.2;
+      margin: 0 0 24px;
+      color: #000;
+    }
+
+    .emu-text__body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: clamp(14px, 1.6vw, 24px);
+      line-height: 1.2;
+      color: #000;
+    }
+
+    .emu-text__body p {
+      margin: 0 0 1.2em;
+    }
+
+    .emu-text__body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .emu-text__body strong {
+      font-weight: 700;
+    }
+
+    /* Bottom navigation */
+    .emu-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 48px 96px 60px;
+      background: #fff;
+    }
+
+    .emu-nav a {
+      display: block;
+      transition: opacity 0.2s;
+    }
+
+    .emu-nav a:hover { opacity: 0.45; }
+
+    .emu-nav img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
@@ -18,37 +105,51 @@
     </ul>
   </nav>
 
-  <main class="project-page">
-    <a href="../index.html" class="project-page__back">← Back to Photography</a>
+  <div class="emu-page">
 
-    <h1 class="project-page__title">People</h1>
-
-    <img
-      class="project-page__hero"
-      src="https://picsum.photos/seed/people_hero/1200/675"
-      alt="People — Hero Image"
-    />
-
-    <p class="project-page__description">
-      Candid and editorial portraits capturing individual expression,
-      cultural identity, and human connection. Each image tells a story
-      through gesture, gaze, and environment — seeking the universal
-      in the specific.
-    </p>
-
-    <div class="project-page__meta">
-      <span>Type <strong>Portrait Photography</strong></span>
-      <span>Year <strong>2025</strong></span>
-      <span>Tools <strong>Sony A7 III, Lightroom, Photoshop</strong></span>
+    <!-- Full-width last supper group photo -->
+    <div class="emu-full">
+      <img
+        src="https://www.figma.com/api/mcp/asset/0ba7118b-07dc-42a9-983e-96a0b899a8e4"
+        alt="Last Supper emulation — group photo"
+      />
     </div>
 
-    <div class="project-gallery">
-      <img src="https://picsum.photos/seed/people_g1/800/600" alt="Project detail 1" />
-      <img src="https://picsum.photos/seed/people_g2/800/600" alt="Project detail 2" />
-      <img src="https://picsum.photos/seed/people_g3/800/600" alt="Project detail 3" />
-      <img src="https://picsum.photos/seed/people_g4/800/600" alt="Project detail 4" />
+    <!-- Full-width ID portrait grid (2 rows × 6 cols) -->
+    <div class="emu-grid">
+      <img
+        src="https://www.figma.com/api/mcp/asset/5c96a5aa-e462-4552-aa52-24f8eae50a6e"
+        alt="ID portrait grid — 12 subjects"
+      />
     </div>
-  </main>
+
+    <!-- Project text -->
+    <div class="emu-text">
+      <h1 class="emu-text__title">Emulation</h1>
+      <div class="emu-text__body">
+        <p><strong>The task</strong><br>
+        We were tasked to emulate a photographer of our choosing.</p>
+
+        <p><strong>My interpretation</strong><br>
+        I chose to emulate David LaChapelle's "last supper" because it is challenging the boundaries between being profane and sacred, as well as criticizing the commercialization of spirituality.</p>
+
+        <p>I also found myself drawn to the work of Tomoko Sawade since she condemns the standardization of official ID photos and speaks about the fluidity of identity in modern society. Furthermore, she explores identity constructions, gender performances, and how appearance can shape perception.</p>
+
+        <p>I wanted to showcase what women are often told to look like or do as "IDs" and how women are frequently being perceived and expected to act in more conservative settings as for example the catholic church. Hence, I wanted to incorporate the idea of a male gaze in my photography. In addition, there are only 11 disciples instead of 12 in my work as I wanted to leave room for all the women that feel like they have to be a certain way.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom navigation arrows -->
+  <nav class="emu-nav" aria-label="Project navigation">
+    <a href="../index.html" aria-label="Previous project">
+      <img src="https://www.figma.com/api/mcp/asset/6b1ca897-3feb-4c0f-9e3f-1aa172bff107" alt="←" />
+    </a>
+    <a href="../index.html" aria-label="Next project">
+      <img src="https://www.figma.com/api/mcp/asset/ebe8f1d4-1beb-487e-afdb-56e57daf0109" alt="→" />
+    </a>
+  </nav>
 
   <script src="../../js/main.js"></script>
 </body>

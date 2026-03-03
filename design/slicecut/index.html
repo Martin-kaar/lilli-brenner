@@ -3,8 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Do You Feel Included? — Lilli Brenner</title>
+  <title>Typography: Slicecut — Lilli Brenner</title>
   <link rel="stylesheet" href="../../css/styles.css" />
+  <style>
+    /* ---- Slicecut Project Page ---- */
+    .slicecut-intro {
+      display: flex;
+      gap: clamp(32px, 4vw, 60px);
+      padding: 36px 36px 0;
+      align-items: flex-start;
+    }
+
+    .slicecut-intro__image {
+      flex: 0 0 clamp(200px, 31.7vw, 480px);
+      height: clamp(280px, 44.8vw, 678px);
+      overflow: hidden;
+    }
+
+    .slicecut-intro__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slicecut-intro__text {
+      flex: 1;
+      padding-top: 4px;
+    }
+
+    .slicecut-page-title {
+      font-family: 'Corporate A Pro', 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(2rem, 4vw, 60px);
+      font-weight: 400;
+      line-height: 1.2;
+      color: #000;
+      margin-bottom: 40px;
+    }
+
+    .slicecut-text-block {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: clamp(16px, 1.6vw, 24px);
+      font-weight: 400;
+      line-height: 1.2;
+      color: #000;
+    }
+
+    .slicecut-text-block strong {
+      font-weight: 700;
+    }
+
+    .slicecut-text-block p + p {
+      margin-top: 20px;
+    }
+
+    /* Full-width images */
+    .slicecut-full {
+      margin-top: 36px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .slicecut-full img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Two-column rows */
+    .slicecut-pair {
+      display: flex;
+      width: 100%;
+      margin-top: 8px;
+      gap: 0;
+    }
+
+    .slicecut-pair__left,
+    .slicecut-pair__right {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .slicecut-pair__left img,
+    .slicecut-pair__right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Bottom navigation */
+    .slicecut-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 48px 96px 60px;
+      background: #fff;
+    }
+
+    .slicecut-nav a {
+      display: block;
+      transition: opacity 0.2s;
+    }
+
+    .slicecut-nav a:hover {
+      opacity: 0.45;
+    }
+
+    .slicecut-nav img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
@@ -18,37 +129,104 @@
     </ul>
   </nav>
 
-  <main class="project-page">
-    <a href="../index.html" class="project-page__back">← Back to Design</a>
+  <!-- Intro: tall poster + project description -->
+  <section class="slicecut-intro">
+    <div class="slicecut-intro__image">
+      <img
+        src="https://www.figma.com/api/mcp/asset/1f68359a-0df6-46dd-ac42-c6048a069f49"
+        alt="Slicecut poster"
+      />
+    </div>
+    <div class="slicecut-intro__text">
+      <h1 class="slicecut-page-title">Typography: Slicecut</h1>
+      <div class="slicecut-text-block">
+        <p>
+          <strong>The task</strong><br />
+          We had to create an abstract typography.
+        </p>
+        <p>
+          <strong>My interpretation</strong><br />
+          I first started with making my font by constructing letters and after I cut them
+          vertically and horizontally, I had my two fonts and then overlayed them.
+          Afterwards I put them in a small magazine to showcase my typeface.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <h1 class="project-page__title">Do You Feel Included?</h1>
-
+  <!-- Full-width: yellow/black spread -->
+  <div class="slicecut-full">
     <img
-      class="project-page__hero tall"
-      src="https://picsum.photos/seed/doyoufeelincluded_hero/800/1067"
-      alt="Do You Feel Included? — Hero Image"
+      src="https://www.figma.com/api/mcp/asset/9eb597b6-4136-47d0-9edb-fa5c7ab47c5c"
+      alt="Slicecut magazine spread"
     />
+  </div>
 
-    <p class="project-page__description">
-      A campaign poster series addressing questions of belonging, diversity,
-      and inclusion in urban and cultural spaces. Bold typographic choices
-      and a high-contrast yellow palette create an immediate, confrontational
-      visual impact designed to stop viewers in their tracks.
-    </p>
+  <!-- Full-width: alphabet spread -->
+  <div class="slicecut-full" style="margin-top: 8px;">
+    <img
+      src="https://www.figma.com/api/mcp/asset/b34ffb35-6fac-4698-b0ac-42123e4652bd"
+      alt="Slicecut alphabet spread"
+    />
+  </div>
 
-    <div class="project-page__meta">
-      <span>Type <strong>Campaign / Poster Design</strong></span>
-      <span>Year <strong>2025</strong></span>
-      <span>Tools <strong>Adobe Illustrator, Photoshop</strong></span>
+  <!-- Two-column: seite1 + image4 -->
+  <div class="slicecut-pair" style="padding: 8px 36px 0;">
+    <div class="slicecut-pair__left" style="flex: 0 0 53.2%;">
+      <img
+        src="https://www.figma.com/api/mcp/asset/74ea5567-6f67-4952-bffb-ad1d8b5641d0"
+        alt="Slicecut magazine page 1"
+      />
     </div>
-
-    <div class="project-gallery">
-      <img src="https://picsum.photos/seed/doyoufeelincluded_g1/800/600" alt="Project detail 1" />
-      <img src="https://picsum.photos/seed/doyoufeelincluded_g2/800/600" alt="Project detail 2" />
-      <img src="https://picsum.photos/seed/doyoufeelincluded_g3/800/600" alt="Project detail 3" />
-      <img src="https://picsum.photos/seed/doyoufeelincluded_g4/800/600" alt="Project detail 4" />
+    <div class="slicecut-pair__right" style="flex: 1;">
+      <img
+        src="https://www.figma.com/api/mcp/asset/2879382e-bc69-4f07-a881-c51f7f72df6a"
+        alt="Slicecut magazine detail"
+      />
     </div>
-  </main>
+  </div>
+
+  <!-- Full-width: seite2 -->
+  <div class="slicecut-full" style="margin-top: 8px; padding: 0 36px;">
+    <img
+      src="https://www.figma.com/api/mcp/asset/b009ddb1-73e2-4337-9e8b-09b2eca0cdc6"
+      alt="Slicecut magazine spread 2"
+    />
+  </div>
+
+  <!-- Two-column: seite4 + seite5 -->
+  <div class="slicecut-pair" style="padding: 8px 36px 0;">
+    <div class="slicecut-pair__left" style="flex: 0 0 46.7%;">
+      <img
+        src="https://www.figma.com/api/mcp/asset/03499611-c1ce-4856-a10a-dc899bf5bb8c"
+        alt="Slicecut magazine page 4"
+      />
+    </div>
+    <div class="slicecut-pair__right" style="flex: 1;">
+      <img
+        src="https://www.figma.com/api/mcp/asset/9bce6cde-6e32-47cc-ae2e-3fc5e6aa15d0"
+        alt="Slicecut magazine page 5"
+      />
+    </div>
+  </div>
+
+  <!-- Full-width: seite6 -->
+  <div class="slicecut-full" style="margin-top: 8px; padding: 0 36px;">
+    <img
+      src="https://www.figma.com/api/mcp/asset/52bc436b-c250-4d90-bfac-1f5008d0a1a0"
+      alt="Slicecut magazine spread 6"
+    />
+  </div>
+
+  <!-- Bottom navigation arrows -->
+  <nav class="slicecut-nav" aria-label="Project navigation">
+    <a href="../index.html" aria-label="Previous project">
+      <img src="https://www.figma.com/api/mcp/asset/398bc431-8947-4495-ad6d-214bac16f8d6" alt="←" />
+    </a>
+    <a href="../index.html" aria-label="Next project">
+      <img src="https://www.figma.com/api/mcp/asset/96fba998-d9f8-44f3-bd6d-adbe861c1756" alt="→" />
+    </a>
+  </nav>
 
   <script src="../../js/main.js"></script>
 </body>
