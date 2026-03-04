@@ -60,9 +60,11 @@
 
     /* Full-width images */
     .sd-full {
-      margin-top: 8px;
+      margin-top: 0;
       width: 100%;
       overflow: hidden;
+      line-height: 0;
+      font-size: 0;
     }
 
     .sd-full img {
@@ -77,16 +79,17 @@
 
     /* Two-column rows */
     .sd-pair {
-      display: flex;
+      display: grid;
       width: 100%;
-      margin-top: 8px;
-      gap: 0;
-      align-items: flex-start;
+      line-height: 0;
+      font-size: 0;
     }
 
     .sd-pair__left,
     .sd-pair__right {
       overflow: hidden;
+      line-height: 0;
+      font-size: 0;
     }
 
     .sd-pair__left img,
@@ -94,6 +97,7 @@
       width: 100%;
       height: auto;
       display: block;
+      vertical-align: bottom;
     }
 
     /* Bottom navigation */
@@ -137,7 +141,7 @@
   <section class="sd-intro">
     <div class="sd-intro__image">
       <img
-        src="https://www.figma.com/api/mcp/asset/0dd9a18a-0fc0-4a3c-a453-ffcf62fe385b"
+        src="assets/1.png"
         alt="Shifting Dialogues flyer"
       />
     </div>
@@ -159,79 +163,57 @@
     </div>
   </section>
 
+  <section style="margin: 0 36px; display: flex; flex-direction: column;">
+
   <!-- Full-width: A4 flyer mockup -->
   <div class="sd-full sd-full--first">
     <img
-      src="https://www.figma.com/api/mcp/asset/8f84a6fa-4062-4e9d-ba71-307317f30206"
+      src="assets/2.png"
       alt="Shifting Dialogues flyer mockup"
     />
   </div>
 
   <!-- Two-column: phone + subway poster mockup (equal heights) -->
-  <div class="sd-pair">
-    <div class="sd-pair__left" style="flex: 0 0 35.7%;">
+  <div class="sd-pair" style="grid-template-columns: 35.7% 64.3%;">
+    <div class="sd-pair__left">
       <img
-        src="https://www.figma.com/api/mcp/asset/9a425a3e-bf60-4ecc-b876-c2b316ba4136"
+        src="assets/3.png"
         alt="Shifting Dialogues app mockup"
       />
     </div>
-    <div class="sd-pair__right" style="flex: 1;">
+    <div class="sd-pair__right">
       <img
-        src="https://www.figma.com/api/mcp/asset/01156fe6-986e-491f-aa71-d6613715d871"
+        src="assets/4.png"
         alt="Shifting Dialogues subway poster mockup"
-      />
-    </div>
-  </div>
-
-  <!-- Two-column: ticket mockup + book mockup -->
-  <div class="sd-pair">
-    <div class="sd-pair__left" style="flex: 0 0 57.4%;">
-      <img
-        src="https://www.figma.com/api/mcp/asset/6be0a4f2-7d4e-4228-91b9-2c222abfc078"
-        alt="Shifting Dialogues ticket mockup"
-      />
-    </div>
-    <div class="sd-pair__right" style="flex: 1;">
-      <img
-        src="https://www.figma.com/api/mcp/asset/c3e6294b-a6b9-40fc-b02f-b4216a622ed3"
-        alt="Shifting Dialogues book mockup"
       />
     </div>
   </div>
 
   <!-- Two-column: poster set mockup + tape mockup -->
   <div class="sd-pair">
-    <div class="sd-pair__left" style="flex: 0 0 55.2%;">
-      <img
-        src="https://www.figma.com/api/mcp/asset/9620ee91-bd92-41b1-b966-6093586040a8"
-        alt="Shifting Dialogues poster set mockup"
-      />
-    </div>
-    <div class="sd-pair__right" style="flex: 1;">
-      <img
-        src="https://www.figma.com/api/mcp/asset/1fac2dbf-567c-4415-bec9-6fa7335a87e5"
-        alt="Shifting Dialogues tape mockup"
-      />
+    <div style="width: 100%;">
+      <img style="width: 100%;" src="assets/Group1.png" alt="mockups">
     </div>
   </div>
 
   <!-- Full-width: bus stop mockup -->
   <div class="sd-full">
     <img
-      src="https://www.figma.com/api/mcp/asset/aa2c432a-a302-4724-9d6e-47b08b576687"
+      src="assets/9.png"
       alt="Shifting Dialogues bus stop mockup"
     />
   </div>
 
   <!-- Bottom navigation arrows -->
   <nav class="sd-nav" aria-label="Project navigation">
-    <a href="../index.html" aria-label="Previous project">
-      <img src="https://www.figma.com/api/mcp/asset/86a1948a-cd7f-4258-94ac-8dfd5b5fea63" alt="←" />
+    <a href="../beyondextraction/index.html" aria-label="Previous project">
+      <img src="../arrow.png" alt="←" />
     </a>
-    <a href="../index.html" aria-label="Next project">
-      <img src="https://www.figma.com/api/mcp/asset/7479a9ce-a3e2-4dc2-b5a6-8c8ad4793d72" alt="→" />
+    <a href="../motiondesign/index.html" aria-label="Next project">
+      <img style="transform: rotate(180deg);" src="../arrow.png" alt="→" />
     </a>
   </nav>
+  </section>
 
   <script src="../../js/main.js"></script>
 </body>
