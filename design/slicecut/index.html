@@ -3,97 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Typography: Slicecut — Lilli Brenner</title>
+  <title>Shifting Dialogues — Lilli Brenner</title>
   <link rel="stylesheet" href="../../css/styles.css" />
   <style>
-    /* ---- Slicecut Project Page ---- */
-    .slicecut-intro {
+    /* ---- Shifting Dialogues Project Page ---- */
+
+    .sd-intro {
       display: flex;
-      gap: clamp(32px, 4vw, 60px);
+      gap: clamp(24px, 4vw, 60px);
       padding: 36px 36px 0;
       align-items: flex-start;
     }
 
-    .slicecut-intro__image {
-      flex: 0 0 clamp(200px, 31.7vw, 480px);
-      height: clamp(280px, 44.8vw, 678px);
+    .sd-intro__image {
+      flex: 0 0 clamp(180px, 35vw, 529px);
+      height: clamp(250px, 45.3vw, 685px);
       overflow: hidden;
     }
 
-    .slicecut-intro__image img {
+    .sd-intro__image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
 
-    .slicecut-intro__text {
+    .sd-intro__text {
       flex: 1;
       padding-top: 4px;
     }
 
-    .slicecut-page-title {
-      font-family: 'Corporate A Pro', 'Playfair Display', serif;
+    .sd-page-title {
+      font-family: 'Corporate A Pro', serif;
       font-style: italic;
       font-size: clamp(2rem, 4vw, 60px);
       font-weight: 400;
       line-height: 1.2;
       color: #000;
-      margin-bottom: 40px;
+      margin-bottom: 24px;
     }
 
-    .slicecut-text-block {
+    .sd-text-block {
       font-family: 'Helvetica Neue', sans-serif;
-      font-size: clamp(16px, 1.6vw, 24px);
+      font-size: clamp(14px, 1.6vw, 24px);
       font-weight: 400;
       line-height: 1.2;
       color: #000;
+      max-width: 60vw;
     }
 
-    .slicecut-text-block strong {
+    .sd-text-block strong {
       font-weight: 700;
     }
 
-    .slicecut-text-block p + p {
-      margin-top: 20px;
+    .sd-text-block p + p {
+      margin-top: 16px;
     }
 
     /* Full-width images */
-    .slicecut-full {
-      margin-top: 36px;
+    .sd-full {
+      margin-top: 0;
       width: 100%;
       overflow: hidden;
+      line-height: 0;
+      font-size: 0;
     }
 
-    .slicecut-full img {
+    .sd-full img {
       width: 100%;
       height: auto;
       display: block;
     }
 
+    .sd-full--first {
+      margin-top: 36px;
+    }
+
     /* Two-column rows */
-    .slicecut-pair {
-      display: flex;
+    .sd-pair {
+      display: grid;
       width: 100%;
-      margin-top: 8px;
-      gap: 0;
+      line-height: 0;
+      font-size: 0;
     }
 
-    .slicecut-pair__left,
-    .slicecut-pair__right {
-      flex: 1;
+    .sd-pair__left,
+    .sd-pair__right {
       overflow: hidden;
+      line-height: 0;
+      font-size: 0;
     }
 
-    .slicecut-pair__left img,
-    .slicecut-pair__right img {
+    .sd-pair__left img,
+    .sd-pair__right img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
       display: block;
+      vertical-align: bottom;
     }
 
     /* Bottom navigation */
-    .slicecut-nav {
+    .sd-nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -101,16 +110,16 @@
       background: #fff;
     }
 
-    .slicecut-nav a {
+    .sd-nav a {
       display: block;
       transition: opacity 0.2s;
     }
 
-    .slicecut-nav a:hover {
+    .sd-nav a:hover {
       opacity: 0.45;
     }
 
-    .slicecut-nav img {
+    .sd-nav img {
       height: 60px;
       width: auto;
       display: block;
@@ -121,7 +130,7 @@
 
   <nav class="navbar">
     <div class="navbar__logo">
-      <a href="../../index.html">Lilli Brenner</a>
+      <a href="../../index.html" style="font-family: Inter;">Lilli Brenner</a>
     </div>
     <ul class="navbar__links">
       <li><a href="../index.html" class="active">Design</a></li>
@@ -129,104 +138,52 @@
     </ul>
   </nav>
 
-  <!-- Intro: tall poster + project description -->
-  <section class="slicecut-intro">
-    <div class="slicecut-intro__image">
+  <!-- Intro: flyer poster left + title & text right -->
+  <section class="sd-intro">
+    <div class="sd-intro__image">
       <img
-        src="https://www.figma.com/api/mcp/asset/1f68359a-0df6-46dd-ac42-c6048a069f49"
-        alt="Slicecut poster"
+        src="assets/1.png"
+        alt="Typography: Slicecut"
       />
     </div>
-    <div class="slicecut-intro__text">
-      <h1 class="slicecut-page-title">Typography: Slicecut</h1>
-      <div class="slicecut-text-block">
+    <div class="sd-intro__text">
+      <h1 class="sd-page-title">Typography: Slicecut</h1>
+      <div class="sd-text-block">
         <p>
           <strong>The task</strong><br />
-          We had to create an abstract typography.
+            We had to create an abstract typography.
         </p>
         <p>
           <strong>My interpretation</strong><br />
-          I first started with making my font by constructing letters and after I cut them
-          vertically and horizontally, I had my two fonts and then overlayed them.
-          Afterwards I put them in a small magazine to showcase my typeface.
-        </p>
+         I first started with making my font by constructing letters and after I cut them vertically and horizontally, I had my two fonts and then overlayed them. Afterwards I put them in a small magazine to showcase my typeface.</p>
       </div>
     </div>
   </section>
+  <section style="margin: 0 36px; display: flex; flex-direction: column;">
 
-  <!-- Full-width: yellow/black spread -->
-  <div class="slicecut-full">
+  <!-- Full-width: A4 flyer mockup -->
+  <div class="sd-full sd-full--first">
     <img
-      src="https://www.figma.com/api/mcp/asset/9eb597b6-4136-47d0-9edb-fa5c7ab47c5c"
-      alt="Slicecut magazine spread"
+      src="assets/2.png"
+      alt="Typography: Slicecut mockup"
     />
   </div>
-
-  <!-- Full-width: alphabet spread -->
-  <div class="slicecut-full" style="margin-top: 8px;">
+    <div class="sd-full sd-full--first">
     <img
-      src="https://www.figma.com/api/mcp/asset/b34ffb35-6fac-4698-b0ac-42123e4652bd"
-      alt="Slicecut alphabet spread"
+      src="assets/3.png"
+      alt="Typography: Slicecut mockup"
     />
   </div>
-
-  <!-- Two-column: seite1 + image4 -->
-  <div class="slicecut-pair" style="padding: 8px 36px 0;">
-    <div class="slicecut-pair__left" style="flex: 0 0 53.2%;">
-      <img
-        src="https://www.figma.com/api/mcp/asset/74ea5567-6f67-4952-bffb-ad1d8b5641d0"
-        alt="Slicecut magazine page 1"
-      />
-    </div>
-    <div class="slicecut-pair__right" style="flex: 1;">
-      <img
-        src="https://www.figma.com/api/mcp/asset/2879382e-bc69-4f07-a881-c51f7f72df6a"
-        alt="Slicecut magazine detail"
-      />
-    </div>
-  </div>
-
-  <!-- Full-width: seite2 -->
-  <div class="slicecut-full" style="margin-top: 8px; padding: 0 36px;">
-    <img
-      src="https://www.figma.com/api/mcp/asset/b009ddb1-73e2-4337-9e8b-09b2eca0cdc6"
-      alt="Slicecut magazine spread 2"
-    />
-  </div>
-
-  <!-- Two-column: seite4 + seite5 -->
-  <div class="slicecut-pair" style="padding: 8px 36px 0;">
-    <div class="slicecut-pair__left" style="flex: 0 0 46.7%;">
-      <img
-        src="https://www.figma.com/api/mcp/asset/03499611-c1ce-4856-a10a-dc899bf5bb8c"
-        alt="Slicecut magazine page 4"
-      />
-    </div>
-    <div class="slicecut-pair__right" style="flex: 1;">
-      <img
-        src="https://www.figma.com/api/mcp/asset/9bce6cde-6e32-47cc-ae2e-3fc5e6aa15d0"
-        alt="Slicecut magazine page 5"
-      />
-    </div>
-  </div>
-
-  <!-- Full-width: seite6 -->
-  <div class="slicecut-full" style="margin-top: 8px; padding: 0 36px;">
-    <img
-      src="https://www.figma.com/api/mcp/asset/52bc436b-c250-4d90-bfac-1f5008d0a1a0"
-      alt="Slicecut magazine spread 6"
-    />
-  </div>
-
   <!-- Bottom navigation arrows -->
-  <nav class="slicecut-nav" aria-label="Project navigation">
-    <a href="../index.html" aria-label="Previous project">
-      <img src="https://www.figma.com/api/mcp/asset/398bc431-8947-4495-ad6d-214bac16f8d6" alt="←" />
+  <nav class="sd-nav" aria-label="Project navigation">
+    <a href="../songcover/index.html" aria-label="Previous project">
+      <img src="../arrow.png" alt="←" />
     </a>
-    <a href="../index.html" aria-label="Next project">
-      <img src="https://www.figma.com/api/mcp/asset/96fba998-d9f8-44f3-bd6d-adbe861c1756" alt="→" />
+    <a href="../jazzfestival/index.html" aria-label="Next project">
+      <img style="transform: rotate(180deg);" src="../arrow.png" alt="→" />
     </a>
   </nav>
+  </section>
 
   <script src="../../js/main.js"></script>
 </body>

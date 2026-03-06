@@ -2,7 +2,6 @@
    LILLI BRENNER PORTFOLIO — Global Styles
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap');
 
 /* ---------- Reset & Base ---------- */
 *, *::before, *::after {
@@ -77,7 +76,7 @@ img {
 }
 
 .navbar__links li a.active {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Corporate A Pro', serif;
   font-style: italic;
 }
 
@@ -226,7 +225,7 @@ img {
 }
 
 .project-page__title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Corporate A Pro', serif;
   font-size: clamp(2rem, 5vw, 3.8rem);
   font-weight: 400;
   line-height: 1.1;

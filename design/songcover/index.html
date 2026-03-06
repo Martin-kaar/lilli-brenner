@@ -3,122 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Song Cover Design — Lilli Brenner</title>
+  <title>Shifting Dialogues — Lilli Brenner</title>
   <link rel="stylesheet" href="../../css/styles.css" />
   <style>
-    /* ---- Song Cover Project Page ---- */
-    .songcover-intro {
+    /* ---- Shifting Dialogues Project Page ---- */
+
+    .sd-intro {
       display: flex;
-      gap: clamp(32px, 4vw, 60px);
+      gap: clamp(24px, 4vw, 60px);
       padding: 36px 36px 0;
       align-items: flex-start;
     }
 
-    .songcover-intro__image {
-      flex: 0 0 clamp(200px, 31.7vw, 480px);
-      aspect-ratio: 1 / 1;
+    .sd-intro__image {
+      flex: 0 0 clamp(180px, 35vw, 529px);
+      height: clamp(250px, 45.3vw, 685px);
       overflow: hidden;
     }
 
-    .songcover-intro__image img {
+    .sd-intro__image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
 
-    .songcover-intro__text {
+    .sd-intro__text {
       flex: 1;
       padding-top: 4px;
     }
 
-    .songcover-page-title {
-      font-family: 'Corporate A Pro', 'Playfair Display', serif;
+    .sd-page-title {
+      font-family: 'Corporate A Pro', serif;
       font-style: italic;
       font-size: clamp(2rem, 4vw, 60px);
       font-weight: 400;
       line-height: 1.2;
       color: #000;
-      margin-bottom: 40px;
+      margin-bottom: 24px;
     }
 
-    .songcover-text-block {
-      font-family: 'Helvetica Neue', sans-serif;
-      font-size: clamp(16px, 1.6vw, 24px);
-      font-weight: 400;
-      line-height: 1.2;
-      color: #000;
-    }
-
-    .songcover-text-block strong {
-      font-weight: 700;
-    }
-
-    .songcover-text-block p + p {
-      margin-top: 20px;
-    }
-
-    /* Overview strip */
-    .songcover-overview {
-      margin-top: 36px;
-      width: 100%;
-      overflow: hidden;
-    }
-
-    .songcover-overview img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* Individual cover rows */
-    .songcover-rows {
-      padding: 8px 36px 0;
-    }
-
-    .songcover-row {
-      display: flex;
-      align-items: center;
-      margin-bottom: 8px;
-    }
-
-    .songcover-row__cover {
-      flex: 0 0 clamp(160px, 31.7vw, 483px);
-      height: clamp(160px, 31.7vw, 483px);
-      overflow: hidden;
-    }
-
-    .songcover-row__cover img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .songcover-row__sketch {
-      flex: 0 0 clamp(120px, 26.4vw, 399px);
-      height: clamp(160px, 31.7vw, 483px);
-      overflow: hidden;
-      margin-left: clamp(16px, 7.5vw, 113px);
-    }
-
-    .songcover-row__sketch img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .songcover-row__label {
-      flex: 1;
-      text-align: right;
+    .sd-text-block {
       font-family: 'Helvetica Neue', sans-serif;
       font-size: clamp(14px, 1.6vw, 24px);
       font-weight: 400;
       line-height: 1.2;
       color: #000;
-      padding-left: 24px;
+      max-width: 60vw;
+    }
+
+    .sd-text-block strong {
+      font-weight: 700;
+    }
+
+    .sd-text-block p + p {
+      margin-top: 16px;
+    }
+
+    /* Full-width images */
+    .sd-full {
+      margin-top: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      font-size: 0;
+    }
+
+    .sd-full img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .sd-full--first {
+      margin-top: 36px;
+    }
+
+    /* Two-column rows */
+    .sd-pair {
+      display: grid;
+      width: 100%;
+      line-height: 0;
+      font-size: 0;
+    }
+
+    .sd-pair__left,
+    .sd-pair__right {
+      overflow: hidden;
+      line-height: 0;
+      font-size: 0;
+    }
+
+    .sd-pair__left img,
+    .sd-pair__right img {
+      width: 100%;
+      height: auto;
+      display: block;
+      vertical-align: bottom;
     }
 
     /* Bottom navigation */
-    .songcover-nav {
+    .sd-nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -126,16 +110,16 @@
       background: #fff;
     }
 
-    .songcover-nav a {
+    .sd-nav a {
       display: block;
       transition: opacity 0.2s;
     }
 
-    .songcover-nav a:hover {
+    .sd-nav a:hover {
       opacity: 0.45;
     }
 
-    .songcover-nav img {
+    .sd-nav img {
       height: 60px;
       width: auto;
       display: block;
@@ -146,7 +130,7 @@
 
   <nav class="navbar">
     <div class="navbar__logo">
-      <a href="../../index.html">Lilli Brenner</a>
+      <a href="../../index.html" style="font-family: Inter;">Lilli Brenner</a>
     </div>
     <ul class="navbar__links">
       <li><a href="../index.html" class="active">Design</a></li>
@@ -154,135 +138,106 @@
     </ul>
   </nav>
 
-  <!-- Intro: hero cover + project description -->
-  <section class="songcover-intro">
-    <div class="songcover-intro__image">
+  <!-- Intro: flyer poster left + title & text right -->
+  <section class="sd-intro">
+    <div class="sd-intro__image">
       <img
-        src="https://www.figma.com/api/mcp/asset/f26e604f-dc7a-4bea-bf68-a2ef4a654486"
-        alt="Hip-Hop, Dead Prez cover"
+        src="assets/1.png"
+        alt="Song cover design flyer"
       />
     </div>
-    <div class="songcover-intro__text">
-      <h1 class="songcover-page-title">Song cover design</h1>
-      <div class="songcover-text-block">
+    <div class="sd-intro__text">
+      <h1 class="sd-page-title">Song cover design</h1>
+      <div class="sd-text-block">
         <p>
           <strong>The task</strong><br />
-          We had to choose 8 songs from different genres before we knew our task,
-          and afterwards had to create 8 covers.
+          We had to choose 8 songs from different genres before we knew our task, and afterwards had to create 8 covers.
         </p>
         <p>
           <strong>My interpretation</strong><br />
-          I first started with sketching ruffly how the music made me feel and then
-          creating moodboards about the atmosphere of the songs. After combining
-          those aspects I started designing the covers with the intention of trying
-          different styles and tools to represent the songs.
-        </p>
+         I first started with sketching ruffly how the music made me feel and then creating moodboards about the atmosphere of the songs. After combining those aspects I started designing the covers with the intention of trying different styles and tools to represent the songs.</p>
       </div>
     </div>
   </section>
+  <section style="display: flex; flex-direction: column;">
 
-  <!-- Overview strip: composite of all 8 covers -->
-  <div class="songcover-overview">
+  <!-- Full-width: A4 flyer mockup -->
+  <div class="sd-full sd-full--first">
     <img
-      src="https://www.figma.com/api/mcp/asset/02440ea8-6442-4d79-bcd4-581b091ecec6"
-      alt="All song covers overview"
+      src="assets/2.png"
+      alt="Song cover design flyer mockup"
     />
   </div>
 
-  <!-- Individual cover rows: final cover | sketch | label -->
-  <div class="songcover-rows">
-
-    <div class="songcover-row">
-      <div class="songcover-row__cover">
-        <img src="https://www.figma.com/api/mcp/asset/f26e604f-dc7a-4bea-bf68-a2ef4a654486" alt="Hip-Hop, Dead Prez" />
-      </div>
-      <div class="songcover-row__sketch">
-        <img src="https://www.figma.com/api/mcp/asset/cac4f95c-a4cc-4808-996f-7bea9791fbc3" alt="Hip-Hop sketch" />
-      </div>
-      <p class="songcover-row__label">Hip-Hop, Dead Prez</p>
+  <section style="margin: 0 36px; display: flex; flex-direction: column; gap: 28px">
+    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+          <div style="display: flex; flex-direction: row; gap: 76px">
+            <img src="assets/1.png" alt="song cover" style="max-width: 27.5vw;">
+            <img src="assets/3.png" alt="song cover" style="max-width: 22.5vw;">
+          </div>
+          <p style="text-align: right; font-size: 24px;">Hip-Hop, Dead Prez</p>
     </div>
-
-    <div class="songcover-row">
-      <div class="songcover-row__cover">
-        <img src="https://www.figma.com/api/mcp/asset/e726b004-4252-467e-8bc6-c6bb604329b9" alt="Let's Stay Together, Al Green" />
-      </div>
-      <div class="songcover-row__sketch">
-        <img src="https://www.figma.com/api/mcp/asset/b82bb4d0-9746-42d6-b6fc-b3b4e69ac5b4" alt="Let's Stay Together sketch" />
-      </div>
-      <p class="songcover-row__label">Let's stay together, Al Green</p>
+    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+          <div style="display: flex; flex-direction: row; gap: 76px">
+            <img src="assets/4.png" alt="song cover" style="max-width: 27.5vw;">
+            <img src="assets/5.png" alt="song cover" style="max-width: 22.5vw;">
+          </div>
+          <p style="text-align: right; font-size: 24px;">Let’s stay together, Al Green</p>
     </div>
-
-    <div class="songcover-row">
-      <div class="songcover-row__cover">
-        <img src="https://www.figma.com/api/mcp/asset/8aac5197-cdbe-49d1-b126-584d9abb8c80" alt="KOI, KBN Chrollo" />
-      </div>
-      <div class="songcover-row__sketch">
-        <img src="https://www.figma.com/api/mcp/asset/04102a2b-7912-4388-b39f-1ff829bf07b0" alt="KOI sketch" />
-      </div>
-      <p class="songcover-row__label">KOI, KBN Chrollo</p>
+    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+          <div style="display: flex; flex-direction: row; gap: 76px">
+            <img src="assets/6.png" alt="song cover" style="max-width: 27.5vw;">
+            <img src="assets/7.png" alt="song cover" style="max-width: 22.5vw;">
+          </div>
+          <p style="text-align: right; font-size: 24px;">KOI, KBN Chrollo</p>
     </div>
-
-    <div class="songcover-row">
-      <div class="songcover-row__cover">
-        <img src="https://www.figma.com/api/mcp/asset/482988bc-d279-437d-81a4-7fecf5d39bcc" alt="Bongoloco, Bruno Furlan" />
-      </div>
-      <div class="songcover-row__sketch">
-        <img src="https://www.figma.com/api/mcp/asset/781246be-1dce-41ea-9707-b017c6149e6f" alt="Bongoloco sketch" />
-      </div>
-      <p class="songcover-row__label">Bongoloco, Bruno Furlan</p>
+    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+          <div style="display: flex; flex-direction: row; gap: 76px">
+            <img src="assets/8.png" alt="song cover" style="max-width: 27.5vw;">
+            <img src="assets/9.png" alt="song cover" style="max-width: 22.5vw;">
+          </div>
+          <p style="text-align: right; font-size: 24px;">Bongoloco, Bruno Furlan</p>
     </div>
-
-    <div class="songcover-row">
-      <div class="songcover-row__cover">
-        <img src="https://www.figma.com/api/mcp/asset/c31c97fa-2444-4b19-a061-e5dbf8ff9a9f" alt="Revolution, Dennis Brown" />
-      </div>
-      <div class="songcover-row__sketch">
-        <img src="https://www.figma.com/api/mcp/asset/68e9cf35-7a8a-4657-8e87-5946dcca0dda" alt="Revolution sketch" />
-      </div>
-      <p class="songcover-row__label">Revolution, Dennis Brown</p>
+    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+          <div style="display: flex; flex-direction: row; gap: 76px">
+            <img src="assets/10.png" alt="song cover" style="max-width: 27.5vw;">
+            <img src="assets/11.png" alt="song cover" style="max-width: 22.5vw;">
+          </div>
+          <p style="text-align: right; font-size: 24px;">Revolution, Dennis Brown</p>
     </div>
-
-    <div class="songcover-row">
-      <div class="songcover-row__cover">
-        <img src="https://www.figma.com/api/mcp/asset/848b1558-b343-425d-94be-e5941b9d7163" alt="Saika, Satomi Saeki" />
-      </div>
-      <div class="songcover-row__sketch">
-        <img src="https://www.figma.com/api/mcp/asset/8f56b595-9a79-4ef2-91eb-842ada581030" alt="Saika sketch" />
-      </div>
-      <p class="songcover-row__label">Saika, Satomi Saeki</p>
+    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+          <div style="display: flex; flex-direction: row; gap: 76px">
+            <img src="assets/12.png" alt="song cover" style="max-width: 27.5vw;">
+            <img src="assets/13.png" alt="song cover" style="max-width: 22.5vw;">
+          </div>
+          <p style="text-align: right; font-size: 24px;">Saika, Satomi Saeki</p>
     </div>
-
-    <div class="songcover-row">
-      <div class="songcover-row__cover">
-        <img src="https://www.figma.com/api/mcp/asset/2e617c31-5e53-4905-b061-4beee240b628" alt="Kaval Sviri, The Bulgarian Voices" />
-      </div>
-      <div class="songcover-row__sketch">
-        <img src="https://www.figma.com/api/mcp/asset/6e8d13a4-f3e1-4282-be77-b2b4791402ca" alt="Kaval Sviri sketch" />
-      </div>
-      <p class="songcover-row__label">Caval Sviri, The Bulgarian Voices</p>
+    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+          <div style="display: flex; flex-direction: row; gap: 76px">
+            <img src="assets/14.png" alt="song cover" style="max-width: 27.5vw;">
+            <img src="assets/15.png" alt="song cover" style="max-width: 22.5vw;">
+          </div>
+          <p style="text-align: right; font-size: 24px;">Caval Sviri, The Bulgarian Voices</p>
     </div>
-
-    <div class="songcover-row">
-      <div class="songcover-row__cover">
-        <img src="https://www.figma.com/api/mcp/asset/1bbf3cfe-f673-4af3-b806-a530b49c2277" alt="Toxic, Britney Spears" />
-      </div>
-      <div class="songcover-row__sketch">
-        <img src="https://www.figma.com/api/mcp/asset/8a1689b9-d016-4f4e-99bf-4d163ca3c8ff" alt="Toxic sketch" />
-      </div>
-      <p class="songcover-row__label">Toxic, Britney Spears</p>
+    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+          <div style="display: flex; flex-direction: row; gap: 76px">
+            <img src="assets/16.png" alt="song cover" style="max-width: 27.5vw;">
+            <img src="assets/17.png" alt="song cover" style="max-width: 22.5vw;">
+          </div>
+          <p style="text-align: right; font-size: 24px;">Toxic, Britney Spears</p>
     </div>
-
-  </div>
+  </section>
 
   <!-- Bottom navigation arrows -->
-  <nav class="songcover-nav" aria-label="Project navigation">
-    <a href="../index.html" aria-label="Previous project">
-      <img src="https://www.figma.com/api/mcp/asset/d20ad60a-0e75-4807-8a0c-236aa59c1386" alt="←" />
+  <nav class="sd-nav" aria-label="Project navigation">
+    <a href="../motiondesign/index.html" aria-label="Previous project">
+      <img src="../arrow.png" alt="←" />
     </a>
-    <a href="../index.html" aria-label="Next project">
-      <img src="https://www.figma.com/api/mcp/asset/849b5264-d1a4-4d15-9def-90612b0c2c41" alt="→" />
+    <a href="../slicecut/index.html" aria-label="Next project">
+      <img style="transform: rotate(180deg);" src="../arrow.png" alt="→" />
     </a>
   </nav>
+  </section>
 
   <script src="../../js/main.js"></script>
 </body>
