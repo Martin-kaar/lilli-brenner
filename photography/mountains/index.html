@@ -12,14 +12,7 @@
       padding: 36px 36px 0;
       display: flex;
       flex-direction: column;
-      gap: 8px;
-    }
-
-    .photo-grid img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      gap: 200px;
     }
 
     /* Row: single full-width image */
@@ -35,36 +28,6 @@
       gap: 8px;
       align-items: flex-start;
     }
-
-    /* Row 2: large left (~56%) + small right (~31%) with gap space on far right */
-    .photo-row--r2 .col-a { flex: 0 0 56.2%; }
-    .photo-row--r2 .col-b { flex: 0 0 31.6%; }
-    .photo-row--r2 .col-spacer { flex: 1; }
-
-    /* Row 3: three equal columns */
-    .photo-row--r3 .col-a,
-    .photo-row--r3 .col-b,
-    .photo-row--r3 .col-c { flex: 1; }
-
-    /* Row 4: spacer left (~33%) + wide right (~67%) */
-    .photo-row--r4 .col-spacer { flex: 0 0 33.5%; }
-    .photo-row--r4 .col-a { flex: 1; }
-
-    /* Row 5: wide left (~67%) + narrow right (~22%) */
-    .photo-row--r5 .col-a { flex: 0 0 67%; }
-    .photo-row--r5 .col-b { flex: 0 0 22.6%; }
-    .photo-row--r5 .col-spacer { flex: 1; }
-
-    /* Row 6: narrow left (~19%) + medium right (~34%) + spacer */
-    .photo-row--r6 .col-a { flex: 0 0 19.1%; }
-    .photo-row--r6 .col-b { flex: 0 0 34.1%; }
-    .photo-row--r6 .col-spacer { flex: 1; }
-
-    /* Row 7: two equal tall images with left offset */
-    .photo-row--r7 .col-spacer { flex: 0 0 8.7%; }
-    .photo-row--r7 .col-a { flex: 0 0 40.5%; }
-    .photo-row--r7 .col-b { flex: 0 0 40.5%; }
-    .photo-row--r7 .col-spacer-r { flex: 1; }
 
     /* Bottom navigation */
     .photo-nav {
@@ -83,6 +46,29 @@
     .photo-nav a:hover { opacity: 0.45; }
 
     .photo-nav img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+        /* Bottom navigation */
+    .sd-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 48px 96px 60px;
+      background: #fff;
+    }
+
+    .sd-nav a {
+      display: block;
+      transition: opacity 0.2s;
+    }
+
+    .sd-nav a:hover {
+      opacity: 0.45;
+    }
+
+    .sd-nav img {
       height: 60px;
       width: auto;
       display: block;
@@ -106,86 +92,68 @@
     <!-- Row 1: Full-width hero -->
     <div class="photo-row--full">
       <img
-        src="https://www.figma.com/api/mcp/asset/358db85e-5796-4d4b-9c69-a4cd882ed685"
+        src="assets/1.png"
         alt="Mountain landscape at dusk"
       />
     </div>
 
     <!-- Row 2: wide left + portrait right -->
-    <div class="photo-row photo-row--r2">
-      <div class="col-a">
-        <img src="https://www.figma.com/api/mcp/asset/e305bf9e-e6ed-4069-b117-28c563e17620" alt="Mountain and trees" />
-      </div>
-      <div class="col-b">
-        <img src="https://www.figma.com/api/mcp/asset/03c1eb41-46a5-4149-96f5-4378ff73ff2c" alt="Horse in field" />
-      </div>
-      <div class="col-spacer"></div>
+    <div style="display: flex; justify-content: space-between;">
+        <img style="max-width: 55vw; min-height: 600px" src="assets/2.png" alt="Mountain and trees" />
+        <img style="max-width: 30vw; min-height: 600px" src="assets/3.png" alt="Horse in field" />
     </div>
 
     <!-- Row 3: three equal columns -->
-    <div class="photo-row photo-row--r3">
-      <div class="col-a">
-        <img src="https://www.figma.com/api/mcp/asset/eafe5004-b5d4-4090-b27d-6cba7bd6de1b" alt="Portrait in nature" />
-      </div>
-      <div class="col-b">
-        <img src="https://www.figma.com/api/mcp/asset/d8b2822f-e9fe-4d06-9e96-9c4727a69cd5" alt="Portrait in nature" />
-      </div>
-      <div class="col-c">
-        <img src="https://www.figma.com/api/mcp/asset/97f7a334-6b02-4613-92e0-c811cd01cdbd" alt="Portrait in meadow" />
-      </div>
+    <div class="photo-row photo-row--r3" style="gap: 0">
+      <img src="assets/4-5-6.png" alt="portrait">
     </div>
 
     <!-- Row 4: spacer + wide image (offset right) -->
-    <div class="photo-row photo-row--r4">
-      <div class="col-spacer"></div>
+    <div class="photo-row photo-row--r4" style="justify-content: flex-end;">
       <div class="col-a">
-        <img src="https://www.figma.com/api/mcp/asset/ea303df2-9d6b-4379-91bf-8bfbd76480fe" alt="People in mountain landscape" />
+        <img src="assets/7.png" alt="People in mountain landscape" />
       </div>
     </div>
 
     <!-- Row 5: wide left + narrow right portrait -->
-    <div class="photo-row photo-row--r5">
+    <div class="photo-row photo-row--r5" style="justify-content: space-between;">
       <div class="col-a">
-        <img src="https://www.figma.com/api/mcp/asset/757cf40a-5f34-42d4-a3bc-97df34b410a5" alt="Car in parking lot forest" />
+        <img style="min-width: 60vw" src="assets/8.png" alt="Car in parking lot forest" />
       </div>
       <div class="col-b">
-        <img src="https://www.figma.com/api/mcp/asset/a0f640fb-9186-4c0b-8b0f-5dd68731e75e" alt="Waterfall rocks" />
+        <img style="min-width: 20vw" src="assets/9.png" alt="Waterfall rocks" />
       </div>
-      <div class="col-spacer"></div>
     </div>
 
     <!-- Row 6: narrow left + medium right -->
-    <div class="photo-row photo-row--r6">
+    <div class="photo-row photo-row--r6" style="gap: 15vw">
       <div class="col-a">
-        <img src="https://www.figma.com/api/mcp/asset/7ea5859c-3541-44c5-8c55-488803358adb" alt="Autumn trees" />
+        <img src="assets/10.png" alt="Autumn trees" />
       </div>
       <div class="col-b">
-        <img src="https://www.figma.com/api/mcp/asset/0b284583-2c75-4928-9e13-23714de9eb83" alt="Mountain lake" />
+        <img src="assets/11.png" alt="Mountain lake" />
       </div>
       <div class="col-spacer"></div>
     </div>
 
     <!-- Row 7: two tall images, centred -->
-    <div class="photo-row photo-row--r7">
-      <div class="col-spacer"></div>
+    <div style="display: flex; gap: 150px; justify-content: flex-end; margin-bottom: 150px;">
       <div class="col-a">
-        <img src="https://www.figma.com/api/mcp/asset/ae3b9fd9-e707-4859-805f-1cbbe701f6a1" alt="City buildings" />
+        <img src="assets/12.png" alt="City buildings" />
       </div>
       <div class="col-b">
-        <img src="https://www.figma.com/api/mcp/asset/286b6be7-eeb7-4dfb-a752-29d5bd07d9e2" alt="City buildings" />
+        <img src="assets/13.png" alt="City buildings" />
       </div>
-      <div class="col-spacer-r"></div>
     </div>
 
   </div>
 
-  <!-- Bottom navigation arrows -->
-  <nav class="photo-nav" aria-label="Project navigation">
-    <a href="../index.html" aria-label="Previous project">
-      <img src="https://www.figma.com/api/mcp/asset/d2dead85-e66c-4731-be34-a05a1eeba331" alt="←" />
+ <nav class="sd-nav" aria-label="Project navigation">
+    <a href="../jazzfestival/index.html" aria-label="Previous project">
+      <img src="../../design/arrow.png" alt="←" />
     </a>
-    <a href="../index.html" aria-label="Next project">
-      <img src="https://www.figma.com/api/mcp/asset/8a8ace13-a1df-4718-bf17-96adfee06aae" alt="→" />
+    <a href="../beyondextraction/index.html" aria-label="Next project">
+      <img style="transform: rotate(180deg);" src="../../design/arrow.png" alt="→" />
     </a>
   </nav>
 
