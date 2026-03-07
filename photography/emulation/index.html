@@ -91,6 +91,31 @@
       width: auto;
       display: block;
     }
+
+            /* Bottom navigation */
+    .sd-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 48px 96px 60px;
+      background: #fff;
+    }
+
+    .sd-nav a {
+      display: block;
+      transition: opacity 0.2s;
+    }
+
+    .sd-nav a:hover {
+      opacity: 0.45;
+    }
+
+    .sd-nav img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+
   </style>
 </head>
 <body>
@@ -110,7 +135,7 @@
     <!-- Full-width last supper group photo -->
     <div class="emu-full">
       <img
-        src="https://www.figma.com/api/mcp/asset/0ba7118b-07dc-42a9-983e-96a0b899a8e4"
+        src="assets/1.png"
         alt="Last Supper emulation — group photo"
       />
     </div>
@@ -118,7 +143,7 @@
     <!-- Full-width ID portrait grid (2 rows × 6 cols) -->
     <div class="emu-grid">
       <img
-        src="https://www.figma.com/api/mcp/asset/5c96a5aa-e462-4552-aa52-24f8eae50a6e"
+        src="assets/2.png"
         alt="ID portrait grid — 12 subjects"
       />
     </div>
@@ -142,12 +167,12 @@
   </div>
 
   <!-- Bottom navigation arrows -->
-  <nav class="emu-nav" aria-label="Project navigation">
-    <a href="../index.html" aria-label="Previous project">
-      <img src="https://www.figma.com/api/mcp/asset/6b1ca897-3feb-4c0f-9e3f-1aa172bff107" alt="←" />
+ <nav class="sd-nav" aria-label="Project navigation">
+    <a href="../lights/index.html" aria-label="Previous project">
+      <img src="../../design/arrow.png" alt="←" />
     </a>
-    <a href="../index.html" aria-label="Next project">
-      <img src="https://www.figma.com/api/mcp/asset/ebe8f1d4-1beb-487e-afdb-56e57daf0109" alt="→" />
+    <a href="../mountains/index.html" aria-label="Next project">
+      <img style="transform: rotate(180deg);" src="../../design/arrow.png" alt="→" />
     </a>
   </nav>
 
