@@ -28,7 +28,6 @@
 
     .sd-intro__text {
       flex: 1;
-      padding-top: 4px;
     }
 
     .sd-page-title {
@@ -36,14 +35,14 @@
       font-style: italic;
       font-size: clamp(2rem, 4vw, 60px);
       font-weight: 400;
-      line-height: 1.2;
+      line-height: 0.9;
       color: #000;
       margin-bottom: 24px;
     }
 
     .sd-text-block {
       font-family: 'Helvetica', sans-serif;
-      font-size: clamp(14px, 1.6vw, 24px);
+      font-size: 24px;
       font-weight: 400;
       line-height: 1.2;
       color: #000;
@@ -140,14 +139,14 @@
   <!-- Intro: flyer poster left + title & text right -->
   <section class="sd-intro">
     <div class="sd-intro__image">
-      <img
-        src="assets/1.png"
-        alt="What is graphic design? flyer"
-      />
+      <video width="100%" height="100%" muted autoplay loop>
+        <source src="assets/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
     <div class="sd-intro__text">
       <h1 class="sd-page-title">What is graphic design?</h1>
-      <div class="sd-text-block">
+      <div class="sd-text-block" style="max-width: 701px;">
         <p>
           <strong>The task</strong><br />
           The task was to create a poster series about what graphic design is to us.
