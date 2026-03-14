@@ -12,7 +12,7 @@
       display: flex;
       gap: 30px;
       padding: 36px 36px 0;
-      align-items: flex-start;
+      align-items: flex-end;
     }
 
     .sd-intro__image {
@@ -28,25 +28,30 @@
 
     .sd-intro__text {
       flex: 1;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
     }
 
     .sd-page-title {
-      font-family: 'Corporate A Pro', serif;
+      font-family: Helvetica;
       font-style: italic;
-      font-size: clamp(2rem, 4vw, 60px);
+      font-size: 56px;
       font-weight: 400;
       line-height: 0.9;
       color: #000;
+      text-align: right;
       margin-bottom: 24px;
+      width: fit-content;
     }
 
     .sd-text-block {
       font-family: 'Helvetica', sans-serif;
-      font-size: 24px;
+      font-size: 16px;
       font-weight: 400;
       line-height: 1.2;
       color: #000;
-      max-width: 60vw;
+      max-width: 45vw;
     }
 
     .sd-text-block strong {
@@ -131,7 +136,7 @@
       <a href="../../index.html" style="font-family: Helvetica;">Lilli Brenner</a>
     </div>
     <ul class="navbar__links">
-      <li><a href="../index.html" class="active">Design</a></li>
+      <li><a href="../index.html" class="active" style=" color: white; background-color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Design</a></li>
       <li><a href="../../photography/index.html">Photography</a></li>
     </ul>
   </nav>
@@ -146,13 +151,13 @@
     </div>
     <div class="sd-intro__text">
       <h1 class="sd-page-title">What is graphic design?</h1>
-      <div class="sd-text-block" style="max-width: 701px;">
+      <div class="sd-text-block" style="max-width: 658px;">
         <p>
-          <strong>The task</strong><br />
+          The task<br />
           The task was to create a poster series about what graphic design is to us.
         </p>
         <p>
-          <strong>My interpretation</strong><br />
+          My interpretation<br />
           For me graphic is like mirror of intentions, that can shape perspectives. I made this poster series through an animation in after effects.
         </p>
       </div>
